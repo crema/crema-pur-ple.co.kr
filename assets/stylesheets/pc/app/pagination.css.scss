@@ -1,0 +1,31 @@
+/* Full number pagination */
+.paging_full_numbers .next:active, .paging_full_numbers .first:active, .paging_full_numbers .previous:active, .paging_full_numbers .last:active { font-weight: normal!important; }
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active { padding: 4px 4px; margin: 0 3px; cursor: pointer; *cursor: hand; color: #6e6e6e; font-size: 11px; }
+.paging_full_numbers a.paginate_button:hover { font-weight: bold; }
+.paging_full_numbers a.paginate_active, .paging_full_numbers a.paginate_button:active { font-weight: bold; }
+.paginate_button_disabled, .paginate_button_disabled:active  { display: none; }
+
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
+  padding: 8px 12px;
+  margin: 0 0;
+  cursor: pointer;
+  color: #9B9B9D;
+  font-weight: bold;
+  font-family: Verdana, Dotum, AppleGothic, sans-serif;
+  font-size: 12px;
+  border-right: none;
+}
+
+a.last.paginate_button, a.next.paginate_button, a.first.paginate_button, a.previous.paginate_button {
+  color: #666;
+  letter-spacing: -2px;
+}
+
+.dataTables_paginate.paging_full_numbers {
+  padding-top: 10px;
+  font-size: 0;
+}
+
+.paging_full_numbers a.paginate_active, .paging_full_numbers a.paginate_button:active {
+  color: #f76560;
+}

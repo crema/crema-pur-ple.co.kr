@@ -1,0 +1,29 @@
+<div class="menu">
+  <ul class="lpane">
+    <li class="message">
+      <div class="inner"><%= @reviews.total_count %>개의 리뷰를 작성하셨습니다.</div>
+    </li>
+  </ul>
+  <ul class="rpane">
+    <%= content_tag :li, class: "group-container #{'selected' if params[:action] == 'photo_reviews'}" do %>
+      <%= link_to params[:action] == 'photo_reviews' ? my_reviews_path(ajax_params(except: :page)) : my_photo_reviews_path(ajax_params(except: :page)), class: 'toggle-group', remote: true do %>
+        <span>포토리뷰 모아보기</span>
+      <% end %>
+    <% end %>
+    <li class="search-container">
+      <span class="sprites-search"></span>
+      <span class="search-title">검색어 입력</span>
+      <%= form_tag url_for(params), class: 'menu-search', method: :get, remote: true do %>
+        <%= text_field_tag('query', @query, autocomplete: "off") %>
+      <% end %>
+      <% if @query %>
+        <%= link_to url_for(params.except(:query)), class: 'remove-query', remote: true do %>
+          <span class="fa fa-times-circle"></span>
+        <% end %>
+      <% end %>
+    </li>
+    <li class="sort-container">
+      <%= select_tag :sort_type, options_for_select(@brand.review_sort_types(@group_by).collect{|sort_type| [ReviewSort.t(sort_type), url_for(params.merge(order: sort_type))]}, url_for(params.merge(order: @review_sort))), class: 'select2' %>
+    </li>
+  </ul>
+</div>

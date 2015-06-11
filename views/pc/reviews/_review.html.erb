@@ -1,0 +1,36 @@
+<%= content_tag_for :li, review, data: {product_url: review.product_url, expand_url: expand_review_path(review)} do %>
+  <%= content_tag :div, class: 'review-content', data: {toggle: true} do %>
+    <div class="review-content-summary">
+      <% review_position = @first_review_position_in_page - review_counter if @first_review_position_in_page %>
+      <div class="col index"><%= @first_review_position_in_page ? review_position : review.id %></div>
+      <div class="col product-image">
+        <a class="link-product link-product-image">
+          <%= image_tag review.product_image_url, class: 'smooth', alt: review.product_name %>
+        </a>
+      </div>
+      <div class="col photo"><%= content_tag :span, nil, class: "#{'sprites-camera' if review.images_count > 0}" %></div>
+      <div class="col title">
+        <%= content_tag :a, review.message.first_line(Settings.max_review_chars_per_line).html_safe, class: 'link-expand' %>
+        <%= "[#{review.comments_count}]" if review.comments_count > 0 %>
+        <% if review.new? %>
+          <span class="sprites-icon-new"></span>
+        <% end %>
+      </div>
+      <div class="col author">
+        <% if (user_grade_icon_url = review.user_grade_icon_url) %>
+          <%= image_tag user_grade_icon_url, class: 'user-grade-icon' %>
+        <% end %>
+        <%= review_user_display_name(review) %>
+      </div>
+      <div class="col created_at"><%= review.created_at.strftime("%Y-%m-%d") %></div>
+      <div class="col score">
+        <div class="star-rating-container">
+          <% (1..5).each do |i| %>
+            <%= content_tag :span, nil, class: "star #{'star-empty' if review.score && i > review.score}" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="review-content-expanded"></div>
+    </div>
+  <% end %>
+<% end %>
