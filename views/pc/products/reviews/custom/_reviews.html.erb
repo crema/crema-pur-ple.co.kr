@@ -1,4 +1,4 @@
-<%= content_tag :div, class: "widget widget-reviews pagination-list #{'no-data' if @reviews.total_count == 0}" do %>
+<%= content_tag :div, class: "widget widget-reviews pagination-list #{'no-data' if product_reviews.total_count == 0}" do %>
   <div style="margin-bottom: 10px;">상품후기 남기고 적립금받으세요. <span style="color: #aaa;">(문의글 혹은 악의적인 비방글은 무통보 삭제된다는 점 유의해주세요^^)</span></div>
   <ul class="header">
     <li>
@@ -11,9 +11,9 @@
     </li>
   </ul>
   <ul class="reviews reviews-product">
-    <%= render partial: 'products/review', collection: @reviews, as: :review %>
+    <%= render partial: 'products/reviews/custom/review', collection: product_reviews, as: :review %>
   </ul>
   <div class="widget-footer">
-    <%= paginate @reviews, params: {review_id: nil}, remote: true, window: kaminari_window(params[:page].to_i, @reviews.total_pages) %>
+    <%= paginate product_reviews, params: {review_id: nil}, remote: true, window: kaminari_window(params[:page].to_i, product_reviews.total_pages) %>
   </div>
 <% end %>

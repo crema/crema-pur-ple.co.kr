@@ -8,7 +8,7 @@
           <i class="sprites-pul_ple_camera" style="vertical-align: middle;"></i><span class="crema-widget-title">생생 포토후기</span>
         </div>
         <% if !@brand.reviews_index_url.blank? %>
-          <%= content_tag :div, @brand.reviews_index_button_title, class: 'lfloat btn show-reviews-index', data: {reviews_index_url: @brand.reviews_index_url} %>
+          <%= content_tag :div, widget.reviews_button_title, class: 'lfloat btn show-reviews-index', data: {reviews_index_url: @brand.reviews_index_url} %>
         <% end %>
       </div>
       <% if display_write_form %>
@@ -72,19 +72,7 @@
         </div>
       <% end %>
     <% end %>
-    <% if @brand.review_show_score_summary || (@brand.review_show_thumbnail_summary && @product.photo_reviews_count > 0) %>
-      <%
-        only_thumbnail = nil
-        if !@brand.review_show_score_summary
-          only_thumbnail = 'only-thumbnail' if !display_write_form
-        end
-      %>
-      <div class="product-reviews-summary <%= only_thumbnail %>">
-        <%= content_tag :div, class: 'score-summary', data: {url: ajax_path(except: [:scores, :filter, :page], atarget: 'reviews')} do %>
-          <%= render 'reviews_summary', product: @product %>
-        <% end %>
-      </div>
-    <% end %>
-    <%= render 'reviews' %>
+    <%= render 'products/reviews/custom/summary', klass: ('without_write_form' unless display_write_form) %>
+    <%= render 'products/reviews/custom/reviews' %>
   <% end %>
 <% end %>

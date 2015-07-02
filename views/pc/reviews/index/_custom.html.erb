@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="widget-body">
-      <%= render 'top_menu' %>
+      <%= render 'reviews/index/custom/top_menu' %>
       <ul class="header">
         <li>
           <div class="col index">번호</div>
@@ -20,7 +20,7 @@
       </ul>
       <%= content_tag :div, '아직 작성한 리뷰가 없습니다.', class: 'no-data-message' %>
       <ul class="reviews reviews-default">
-        <%= render @reviews %>
+        <%= render partial: 'reviews/index/custom/review', collection: @reviews %>
       </ul>
     </div>
     <div class="widget-footer">
