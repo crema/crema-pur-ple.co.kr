@@ -17,12 +17,11 @@
       </div>
       <ul class="product-thumbnail-container">
         <% brand = @brand %>
-        <% review_images.each_with_index do |review_image, index| %>
-          <% image = review_image[:image] %>
+        <% review_images.each_with_index do |image, index| %>
           <%
             if brand.review_enable_gallery_popup
               link_class = 'photo-review-popup fade-from-grayscale'
-              link_data = {photo_review_popup_url: photo_review_popup_review_path(review_image[:review].id, photo_index: review_image[:index])}
+              link_data = {photo_review_popup_url: photo_review_popup_review_path(image.model.id, photo_index: image.mounted_as[5].to_i)}
             else
               link_class = 'link-image-zoom fade-from-grayscale'
               link_data = {url: image.url, width: image.width, height: image.height}
