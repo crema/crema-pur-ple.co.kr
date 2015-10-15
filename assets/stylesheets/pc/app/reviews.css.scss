@@ -247,6 +247,12 @@ li.review {
     line-height: 18px;
   }
 
+  .star-rating-container-placeholder {
+    @include inline-block;
+    vertical-align:middle;
+    height: 100%;
+  }
+
   .panel-heading {
     .star-rating-container, .score-text, .like-result {
       float: left;
