@@ -98,13 +98,13 @@ body.reviews.index, body.products.reviews, body.reviews.photos, body.reviews.pho
         right: 155px;
         text-align: center;
         padding-left: 40px;
-        
+
         .user-grade-icon {
           vertical-align: middle;
           padding-bottom: 3px;
         }
       }
-      
+
       &.created_at {
         width: 90px;
         position: absolute;
@@ -122,7 +122,7 @@ body.reviews.index, body.products.reviews, body.reviews.photos, body.reviews.pho
       }
     }
 
-    li.review {
+    li.review_custom {
       line-height: 68px;
       color: #434343;
       border-top: 0;
@@ -131,10 +131,6 @@ body.reviews.index, body.products.reviews, body.reviews.photos, body.reviews.pho
 
       .title {
         text-align: left;
-      }
-
-      &.photo-review-popup {
-        line-height: 13px;
       }
     }
 
