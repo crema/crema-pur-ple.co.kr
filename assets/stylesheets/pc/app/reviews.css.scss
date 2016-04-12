@@ -633,15 +633,16 @@ li.review {
   }
 
   .btn {
-    width: 54px;
+    width: 64px;
     line-height: 20px;
-    background-color: #303030;
+    background-color: #868686;
     color: #ffffff;
     text-align: center;
     font-size: 10px;
-    border: 1px solid #101010;
-    border-radius: 3px;
+    border: 1px solid #868686;
+    border-radius: 0;
     cursor: pointer;
+    float: right;
   }
 }
 
