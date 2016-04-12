@@ -6,11 +6,9 @@
 .paginate_button_disabled, .paginate_button_disabled:active  { display: none; }
 
 .paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
-  padding: 8px 12px;
-  margin: 0 0;
+  margin: 0px 4px;
   cursor: pointer;
   color: #9B9B9D;
-  font-weight: bold;
   font-family: Verdana, Dotum, AppleGothic, sans-serif;
   font-size: 12px;
   border-right: none;
@@ -27,5 +25,6 @@ a.last.paginate_button, a.next.paginate_button, a.first.paginate_button, a.previ
 }
 
 .paging_full_numbers a.paginate_active, .paging_full_numbers a.paginate_button:active {
-  color: #f76560;
+  color: #9B9B9D;
+  border-top: 2px solid #666;
 }
