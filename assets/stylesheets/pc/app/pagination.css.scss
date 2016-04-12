@@ -1,12 +1,12 @@
 /* Full number pagination */
 .paging_full_numbers .next:active, .paging_full_numbers .first:active, .paging_full_numbers .previous:active, .paging_full_numbers .last:active { font-weight: normal!important; }
-.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active { padding: 4px 4px; margin: 0 3px; cursor: pointer; *cursor: hand; color: #6e6e6e; font-size: 11px; }
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active { padding: 4px 0px; margin: 0 3px; cursor: pointer; *cursor: hand; color: #6e6e6e; font-size: 11px; }
 .paging_full_numbers a.paginate_button:hover { font-weight: normal; }
 .paging_full_numbers a.paginate_active, .paging_full_numbers a.paginate_button:active { font-weight: normal; }
 .paginate_button_disabled, .paginate_button_disabled:active  { display: none; }
 
 .paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
-  margin: 0px 4px;
+  margin: 0px 7px;
   cursor: pointer;
   color: #9B9B9D;
   font-family: Verdana, Dotum, AppleGothic, sans-serif;
