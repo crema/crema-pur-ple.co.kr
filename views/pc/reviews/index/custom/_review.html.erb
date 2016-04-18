@@ -13,7 +13,7 @@
         <%= content_tag :a, review.message.first_line(Settings.max_review_chars_per_line).html_safe, class: 'link-expand' %>
         <%= "[#{review.comments_count}]" if review.comments_count > 0 %>
         <% if review.new? %>
-          <span class="sprites-icon-new"></span>
+          <img src="http://assets.cre.ma/m/custom/pur_ple_com/purple_new_icon.png">
         <% end %>
       </div>
       <div class="col author">
