@@ -9,6 +9,10 @@ body.products.reviews, #review-edit-form {
 
       .widget-heading {
         height: 23px;
+        
+        .widget-title {
+          font-family: Dotum,AppleGothic,sans-serif !important;
+        }
 
         .crema-widget-title {
           vertical-align: middle;
@@ -26,10 +30,11 @@ body.products.reviews, #review-edit-form {
       padding-top: 38px;
 
       ul.header {
+        font-family: Dotum,AppleGothic,sans-serif !important;
         line-height: 32px;
-        color: #555;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #eee;
+        color: #B7B7B7;
+        border-top: 1px solid #adadad;
+        border-bottom: 1px solid #adadad;
 
         .col {
           line-height: 36px;
@@ -37,13 +42,13 @@ body.products.reviews, #review-edit-form {
           .title {
             text-align: center;
             width: 60%;
-            color: #4c4c4c;
+            color: #cdcdcd;
           }
         }
       }
 
       .reviews-product .review .review-content {
-        line-height: 28px;
+        line-height: 35px;
       }
 
       ul.reviews, ul.header {
@@ -84,7 +89,7 @@ body.products.reviews, #review-edit-form {
             padding-right: 270px;
 
             a {
-              color: #666;
+              color: #777;
             }
           }
 
@@ -127,7 +132,7 @@ body.products.reviews, #review-edit-form {
             }
 
             &.created_at {
-              font-size: 10px;
+              font-size: 11px;
               color: #999;
             }
           }
@@ -199,9 +204,10 @@ body.products.reviews, #review-edit-form {
   }
 
   .product_reviews_summary {
+    font-family: Dotum,AppleGothic,sans-serif !important;
     padding: 16px 35px;
     border: 1px solid #dadada;
-    margin: 50px 0 20px 0;
+    margin: 20px 0 20px 0;
 
     &.only-thumbnail {
       border-top: 3px solid #aaa;
@@ -549,6 +555,8 @@ body.products.reviews, #review-edit-form {
 }
 
 ul.reviews.reviews-product {
+  font-family: Dotum,AppleGothic,sans-serif !important;
+  
   li.review {
     ul.images {
       display: inline-block;
