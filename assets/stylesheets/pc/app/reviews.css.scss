@@ -21,8 +21,13 @@ body.reviews.index, body.products.reviews, body.reviews.photos, body.reviews.pho
   .widget-body {
     border-bottom: none;
   }
+  
+  .menu {
+    font-family: Dotum,AppleGothic,sans-serif !important;
+  }
 
   ul.header {
+    font-family: Dotum,AppleGothic,sans-serif !important;
     line-height: 32px;
     border-bottom: 2px solid #dadada;
     color: #B7B7B7;
@@ -35,6 +40,7 @@ body.reviews.index, body.products.reviews, body.reviews.photos, body.reviews.pho
   }
 
   ul.reviews, ul.header {
+    font-family: Dotum,AppleGothic,sans-serif !important;
     width: 100%;
     border-spacing: 0;
     position: relative;
