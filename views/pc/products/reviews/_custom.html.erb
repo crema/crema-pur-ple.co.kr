@@ -5,7 +5,7 @@
     <%= content_tag :div, class: "widget new-review first #{'no-writable' if !@brand.review_writable?}" do %>
       <div class="widget-heading">
         <div class="widget-title">
-          <i class="sprites-pul_ple_camera" style="vertical-align: middle;"></i><span class="crema-widget-title">생생 포토후기</span>
+          <%= widget.title.html_safe %>
         </div>
         <% if !@brand.reviews_index_url.blank? %>
           <%= content_tag :div, widget.reviews_button_title, class: 'lfloat btn show-reviews-index', data: {reviews_index_url: @brand.reviews_index_url} %>
