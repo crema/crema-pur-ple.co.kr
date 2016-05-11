@@ -170,8 +170,6 @@ body.products.reviews, #review-edit-form {
     }
   }
 
-  
-
   .widget-footer {
     padding-top: 0 !important;
   }
@@ -182,6 +180,25 @@ body.products.reviews, #review-edit-form {
 
   .widget-reviews.no-data {
     display: none;
+  }
+
+  .widget-reviews--name_username {
+    .header .author {
+      right: 180px;
+      text-align: center;
+      width: 150px;
+    }
+
+    .review {
+      .title {
+        padding-right: 360px;
+      }
+
+      .author {
+        width: 150px;
+        right: 170px;
+      }
+    }
   }
 
   .select2-container#s2id_review_score {
