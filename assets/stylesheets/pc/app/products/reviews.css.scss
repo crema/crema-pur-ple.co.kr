@@ -105,6 +105,12 @@ body.products.reviews, #review-edit-form {
             }
           }
 
+          &.author--name_username {
+            right: 190px;
+            width: 160px;
+            text-align: center;
+          }
+
           &.created_at {
             right: 100px;
           }
@@ -128,6 +134,16 @@ body.products.reviews, #review-edit-form {
             color: #777;
 
             &.title {
+              text-align: left;
+            }
+
+            &.title--name_username {
+              padding-right: 360px;
+            }
+
+            &.author--name_username {
+              width: 160px;
+              right: 170px;
               text-align: left;
             }
 
@@ -180,25 +196,6 @@ body.products.reviews, #review-edit-form {
 
   .widget-reviews.no-data {
     display: none;
-  }
-
-  .widget-reviews--name_username {
-    .header .author {
-      right: 180px;
-      text-align: center;
-      width: 150px;
-    }
-
-    .review {
-      .title {
-        padding-right: 360px;
-      }
-
-      .author {
-        width: 150px;
-        right: 170px;
-      }
-    }
   }
 
   .select2-container#s2id_review_score {
