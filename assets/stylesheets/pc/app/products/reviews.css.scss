@@ -86,7 +86,7 @@ body.products.reviews, #review-edit-form {
             text-overflow: ellipsis;
             vertical-align: middle;
             padding-left: 161px;
-            padding-right: 270px;
+            padding-right: 315px;
 
             a {
               color: #777;
@@ -97,8 +97,12 @@ body.products.reviews, #review-edit-form {
             width: 125px;
             position: absolute;
             top: 0;
-            right: 130px;
+            right: 190px;
             text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: 0;
 
             .user-grade-icon {
               margin-left: -12px;
@@ -107,6 +111,7 @@ body.products.reviews, #review-edit-form {
 
           &.created_at {
             right: 100px;
+            padding-left: 0;
           }
 
           &.score {
@@ -140,7 +145,6 @@ body.products.reviews, #review-edit-form {
 
         .star-rating-container span {
           vertical-align: middle;
-          margin-top: 5px;
         }
 
         .sprites-camera {
