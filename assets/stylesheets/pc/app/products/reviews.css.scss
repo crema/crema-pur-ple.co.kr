@@ -97,9 +97,8 @@ body.products.reviews, #review-edit-form {
             width: 125px;
             position: absolute;
             top: 0;
-            right: 190px;
-            width: 160px;
-            text-align: center;
+            right: 130px;
+            text-align: left;
 
             .user-grade-icon {
               margin-left: -12px;
@@ -129,13 +128,6 @@ body.products.reviews, #review-edit-form {
             color: #777;
 
             &.title {
-              text-align: left;
-              padding-right: 360px;
-            }
-
-            &.author {
-              width: 160px;
-              right: 170px;
               text-align: left;
             }
 
