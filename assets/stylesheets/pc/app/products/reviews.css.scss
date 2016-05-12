@@ -9,7 +9,7 @@ body.products.reviews, #review-edit-form {
 
       .widget-heading {
         height: 23px;
-        
+
         .widget-title {
           font-family: Dotum,AppleGothic,sans-serif !important;
         }
@@ -97,18 +97,13 @@ body.products.reviews, #review-edit-form {
             width: 125px;
             position: absolute;
             top: 0;
-            right: 130px;
-            text-align: left;
+            right: 190px;
+            width: 160px;
+            text-align: center;
 
             .user-grade-icon {
               margin-left: -12px;
             }
-          }
-
-          &.author--name_username {
-            right: 190px;
-            width: 160px;
-            text-align: center;
           }
 
           &.created_at {
@@ -135,13 +130,10 @@ body.products.reviews, #review-edit-form {
 
             &.title {
               text-align: left;
-            }
-
-            &.title--name_username {
               padding-right: 360px;
             }
 
-            &.author--name_username {
+            &.author {
               width: 160px;
               right: 170px;
               text-align: left;
@@ -570,7 +562,7 @@ body.products.reviews, #review-edit-form {
 
 ul.reviews.reviews-product {
   font-family: Dotum,AppleGothic,sans-serif !important;
-  
+
   li.review {
     ul.images {
       display: inline-block;

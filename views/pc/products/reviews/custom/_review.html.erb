@@ -4,16 +4,16 @@
       <% review_position = @first_review_position_in_page - review_counter if @first_review_position_in_page %>
       <div class="col index"><%= @first_review_position_in_page ? review_position : review.id %></div>
       <div class="col photo"><%= content_tag :span, nil, class: "#{'sprites-camera' if review.images_count > 0}" %></div>
-      <%= content_tag :div, nil, class: "col title title--#{review_name_display_type_text}" do %>
+      <div class="col title">
         <%= content_tag :a, review.message.first_line(Settings.max_review_chars_per_line).html_safe, class: 'link-expand' %>
         <%= "[#{review.comments_count}]" if review.comments_count > 0 %>
-      <% end %>
-      <%= content_tag :div, nil, class: "col author author--#{review_name_display_type_text}" do %>
+      </div>
+      <div class="col author">
         <% if (user_grade_icon_url = review.user_grade_icon_url) %>
           <%= image_tag user_grade_icon_url, class: 'user-grade-icon' %>
         <% end %>
         <%= review_user_display_name(review) %>
-      <% end %>
+      </div>
       <div class="col created_at"><%= review.created_at.strftime("%Y-%m-%d") %></div>
       <div class="col score">
         <div class="star-rating-container">

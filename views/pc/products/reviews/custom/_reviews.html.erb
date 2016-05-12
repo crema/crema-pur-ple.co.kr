@@ -1,17 +1,16 @@
 <%= content_tag :div, class: "widget widget-reviews pagination-list #{'no-data' if product_reviews.total_count == 0} review_name_display_type--#{ReviewNameDisplayType.key_string(brand.review_name_display_type)}" do %>
-  <% review_name_display_type_text = ReviewNameDisplayType.key_string(brand.review_name_display_type) %>
   <ul class="header">
     <li>
       <div class="col index">번호</div>
       <div class="col photo">사진</div>
       <div class="col title">제목</div>
-      <%= content_tag :div, '작성자', class: "col author author--#{review_name_display_type_text}" %>
+      <div class="col author">작성자</div>
       <div class="col created_at">작성일</div>
       <div class="col score">평점</div>
     </li>
   </ul>
   <ul class="reviews reviews-product">
-    <%= render partial: 'products/reviews/custom/review', collection: product_reviews, as: :review, locals: {review_name_display_type_text: review_name_display_type_text} %>
+    <%= render partial: 'products/reviews/custom/review', collection: product_reviews, as: :review %>
   </ul>
   <div class="widget-footer">
     <%= paginate product_reviews, params: {review_id: nil}, remote: true, window: kaminari_window(params[:page].to_i, product_reviews.total_pages) %>
