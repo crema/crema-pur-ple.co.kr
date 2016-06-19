@@ -63,7 +63,7 @@ $menu_rpane_width: 400px;
     &.sort-container {
       padding: 0;
       width: 121px;
-      font-family: $font-default;
+      @include font-default;
 
       .select2-chosen {
         font-size: 12px;
