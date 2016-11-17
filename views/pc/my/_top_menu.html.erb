@@ -23,7 +23,7 @@
       <% end %>
     </li>
     <li class="sort-container">
-      <%= select_tag :sort_type, options_for_select(sort_types.map {|s| [ReviewSort.t(s), url_for(params.merge(sort: s))]}, url_for(params.merge(sort: @review_sort))), class: 'select2' %>
+      <%= select_tag :sort, options_for_select(sort_types.map {|s| [ReviewSort.t(s), url_for(params.merge(sort: s))]}, url_for(params.merge(sort: @review_sort))), class: 'select2' %>
     </li>
   </ul>
 </div>
