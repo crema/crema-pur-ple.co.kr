@@ -19,14 +19,8 @@
         <% brand = @brand %>
         <% review_images.each_with_index do |image, index| %>
           <%
-            if brand.review_enable_gallery_popup
-              link_class = 'link-fullscreen-popup fade-from-grayscale'
-              link_data = {url: photo_review_popup_review_path(image.model.id, photo_index: image.mounted_as[5].to_i)}
-            else
-              link_class = 'link-image-zoom fade-from-grayscale'
-              w, h = image.dimension
-              link_data = {url: image.url, width: w, height: h}
-            end
+            link_class = 'link-fullscreen-popup fade-from-grayscale'
+            link_data = {url: photo_review_popup_review_path(image.model.id, photo_index: image.mounted_as[5].to_i)}
           %>
           <li class="photo-review-thumbnail">
             <%= content_tag :a, data: link_data, class: link_class do %>
